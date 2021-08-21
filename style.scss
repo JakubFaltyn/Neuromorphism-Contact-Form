@@ -1,8 +1,8 @@
 
 :root {
     --primary-light: #8abdff;
-    --primary: #6d5dfc;
-    --primary-dark: #5b0eeb;
+    --primary: #3656e3;
+    --primary-dark: #2d46b5;
     
     --white: #FFFFFF;
     --greyLight-1: #E4EBF5;
@@ -47,7 +47,86 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background: var(--greyLight-1);
+    color: var(--greyDark);
 }
 
+.form-container {
+    width: 70rem;
+    height: 40rem;
+    border-radius: 3rem;
+    box-shadow:.8rem .8rem 1.4rem var(--greyLight-2), 
+              -.2rem -.2rem 1.8rem var(--white);
+    display: grid;
+    grid-template-columns: 32.5rem 32.5rem;
+    grid-template-rows: 7rem;
+    grid-column-gap: 5rem;
+    grid-row-gap: 0rem;
+    align-items: center;
+}
+
+h1 {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.form {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content:flex-start;
+    gap: 2rem;
+    &__input {
+        width: 25rem;
+        height: 4rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+        padding-left: 1.4rem;
+        box-shadow: $inner-shadow;
+        background: none;
+        font-family: inherit;
+        color: var(--greyDark);
+    
+        &::placeholder { color: var(--greyLight-3); }
+        &:focus { outline: none; box-shadow: $shadow; }
+    }
+    &__message {
+        height: 8rem;
+        text-align: start;
+    }
+    &__btn {
+        background: rgb(44, 61, 219);
+        width: 25rem;
+        height: 4rem;
+        border: none;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .3s ease;
+        font-size: 1.5rem;
+        color: var(--greyDark);
+        background: var(--primary);
+        box-shadow:inset .2rem .2rem 1rem var(--primary-light), 
+                inset -.2rem -.2rem 1rem var(--primary-dark),
+                $shadow;
+        color: var(--greyLight-1);
+          
+        &:hover { color: var(--white); }
+        &:active {
+        box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
+                inset -.2rem -.2rem 1rem var(--primary-light);
+              }
+    }   
+}
