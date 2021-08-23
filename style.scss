@@ -114,7 +114,7 @@ h1 {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: .3s ease;
+        transition: .1s ease;
         font-size: 1.5rem;
         color: var(--greyDark);
         background: var(--primary);
@@ -125,8 +125,12 @@ h1 {
           
         &:hover { color: var(--white); }
         &:active {
-        box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
-                inset -.2rem -.2rem 1rem var(--primary-light);
-              }
+            box-shadow:inset .2rem .2rem 1rem var(--primary-dark), 
+            inset -.2rem -.2rem 1rem var(--primary-light);
+        }
     }   
+}
+
+.animation{
+    
 }
