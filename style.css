@@ -63,7 +63,7 @@ html {
       grid-template-columns: 32.5rem 32.5rem;
   -ms-grid-rows: 7rem;
       grid-template-rows: 7rem;
-  grid-column-gap: 5rem;
+  grid-column-gap: 7rem;
   grid-row-gap: 0rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -165,8 +165,8 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
   font-size: 1.5rem;
   color: var(--greyDark);
   background: var(--primary);
@@ -182,5 +182,37 @@ h1 {
 .form__btn:active {
   -webkit-box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
           box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
+}
+
+@-webkit-keyframes plane-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes plane-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animation-container__plane {
+  display: block;
+  width: 250px;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.animation-container__plane:hover {
+  -webkit-transform: translate(100px, -40px);
+          transform: translate(100px, -40px);
 }
 /*# sourceMappingURL=style.css.map */

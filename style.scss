@@ -61,7 +61,7 @@ html {
     display: grid;
     grid-template-columns: 32.5rem 32.5rem;
     grid-template-rows: 7rem;
-    grid-column-gap: 5rem;
+    grid-column-gap: 7rem;
     grid-row-gap: 0rem;
     align-items: center;
 }
@@ -130,7 +130,22 @@ h1 {
         }
     }   
 }
+@keyframes plane-out {
+    from{
+        opacity: 1;
 
-.animation{
-    
+    }
+    to{
+        opacity: 0;
+    }
+}
+.animation-container{
+    &__plane{
+        display: block;
+        width: 250px;
+        transition: transform 300ms ease-in-out;
+        &:hover{
+            transform: translate(100px, -40px);
+        }
+    }
 }
