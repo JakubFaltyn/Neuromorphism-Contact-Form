@@ -147,7 +147,7 @@ h1 {
 }
 
 .form__btn {
-  background: #2c3ddb;
+  background: var(--primary);
   width: 25rem;
   height: 4rem;
   border: none;
@@ -184,35 +184,15 @@ h1 {
           box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
 }
 
-@-webkit-keyframes plane-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes plane-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.animation-container {
+  position: relative;
 }
 
 .animation-container__plane {
-  display: block;
   width: 250px;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-}
-
-.animation-container__plane__clicked {
-  -webkit-transform: translate(100px, -40px);
-          transform: translate(100px, -40px);
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 300ms ease-in-out, opacity 0.5s ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
